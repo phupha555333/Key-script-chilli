@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Key - phupha55533</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background-color: #121212; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background-color: #1e1e1e; padding: 30px; border-radius: 12px; text-align: center; max-width: 400px; width: 90%; }
+        h1 { font-size: 22px; margin-bottom: 10px; color: #00aaff; }
+        p { font-size: 14px; color: #aaa; margin-bottom: 20px; }
+        .key-box { background-color: #2a2a2a; border: 1px solid #444; padding: 12px; border-radius: 6px; font-size: 18px; font-weight: bold; color: #2ecc71; margin-bottom: 15px; }
+        button { background-color: #00aaff; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>phupha55533 Key System</h1>
+    <p>กดปุ่มด้านล่างเพื่อคัดลอกคีย์นำไปใช้งานในสคริปต์</p>
+    <div class="key-box" id="keyText">rak-praw</div>
+    <button onclick="copyKey()" id="copyBtn">Copy Key</button>
+</div>
+<script>
+    function copyKey() {
+        navigator.clipboard.writeText("rak-praw").then(() => {
+            const btn = document.getElementById("copyBtn");
+            btn.innerText = "Copied!";
+            btn.style.backgroundColor = "#2ecc71";
+            setTimeout(() => { btn.innerText = "Copy Key"; btn.style.backgroundColor = "#00aaff"; }, 2000);
+        });
+    }
+</script>
+</body>
+</html>
